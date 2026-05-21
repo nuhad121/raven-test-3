@@ -1,0 +1,12 @@
+# RAVEN — Cloudflare Pages (ahnuhad.site)
+# Deploy: npm install && npm run deploy
+# Or: GitHub → Actions → "Deploy to Cloudflare Pages"
+name = "ahnuhad"
+compatibility_date = "2024-08-01"
+pages_build_output_dir = "."
+
+# KV: create in dashboard → bind as RAVEN_KV (see CLOUDFLARE-SETUP.md)
+# Optional local dev — replace id after creating namespace:
+# [[kv_namespaces]]
+# binding = "RAVEN_KV"
+# id = "YOUR_KV_NAMESPACE_ID"

@@ -1,0 +1,14 @@
+{
+  "name": "raven-ahnuhad",
+  "private": true,
+  "description": "RAVEN store — Cloudflare Pages + Brevo OTP + admin user sync",
+  "scripts": {
+    "cf:login": "wrangler login",
+    "cf:project": "wrangler pages project create ahnuhad --production-branch=main",
+    "deploy": "wrangler pages deploy . --project-name=ahnuhad",
+    "deploy:branch": "wrangler pages deploy . --project-name=ahnuhad --branch=main"
+  },
+  "devDependencies": {
+    "wrangler": "^3.114.0"
+  }
+}

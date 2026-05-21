@@ -1,0 +1,83 @@
+/* RAVEN Admin Dashboard */
+.admin-layout {
+  display: flex; min-height: 100vh;
+  background: #f4f4f5;
+}
+[data-theme='dark'] .admin-layout { background: #111; }
+
+#admin-sidebar {
+  width: 260px; flex-shrink: 0;
+  background: #0a0a0a; color: #aaa;
+  padding: 1.5rem 0; display: flex; flex-direction: column;
+  position: fixed; top: 0; bottom: 0; left: 0; z-index: 100;
+  overflow-y: auto;
+}
+.admin-brand {
+  color: #fff; font-weight: 800; letter-spacing: 0.2em;
+  padding: 0 1.5rem 1.5rem; font-size: 1.1rem;
+}
+.admin-brand span { color: #666; font-size: 0.7rem; display: block; letter-spacing: 0.1em; }
+.admin-nav { flex: 1; }
+.admin-nav-link {
+  display: flex; align-items: center; gap: 0.65rem;
+  padding: 0.65rem 1.5rem; color: #999; text-decoration: none;
+  font-size: 0.9rem; transition: 0.2s;
+}
+.admin-nav-link:hover, .admin-nav-link.active {
+  color: #fff; background: rgba(255,255,255,0.06);
+}
+.admin-nav-link.active { border-left: 3px solid #fff; }
+
+.admin-main {
+  flex: 1; margin-left: 260px;
+  display: flex; flex-direction: column;
+}
+.admin-topbar {
+  background: var(--raven-bg, #fff);
+  border-bottom: 1px solid #e5e5e5;
+  padding: 1rem 1.5rem;
+  display: flex; justify-content: space-between; align-items: center;
+  position: sticky; top: 0; z-index: 50;
+}
+.admin-content { padding: 1.5rem; }
+
+.stat-card {
+  background: #fff; border-radius: 12px;
+  padding: 1.25rem; border: 1px solid #eee;
+  height: 100%;
+}
+[data-theme='dark'] .stat-card { background: #1a1a1a; border-color: #333; }
+.stat-card h3 { font-size: 1.75rem; font-weight: 700; margin: 0.5rem 0 0; }
+.stat-card p { color: #888; font-size: 0.85rem; margin: 0; }
+
+.admin-table {
+  background: #fff; border-radius: 12px;
+  overflow: hidden; border: 1px solid #eee;
+}
+[data-theme='dark'] .admin-table { background: #1a1a1a; border-color: #333; }
+.admin-table table { margin: 0; }
+.admin-thumb { width: 48px; height: 48px; object-fit: cover; border-radius: 4px; }
+
+.badge-status {
+  font-size: 0.75rem; padding: 0.25rem 0.5rem;
+  border-radius: 4px; text-transform: capitalize;
+}
+.badge-status.pending { background: #fff3e0; color: #e65100; }
+.badge-status.delivered { background: #e8f5e9; color: #2e7d32; }
+.badge-status.shipped { background: #e3f2fd; color: #1565c0; }
+
+.banner-admin-card {
+  border: 1px solid #ddd; border-radius: 8px; overflow: hidden;
+  background: #fff;
+}
+.banner-admin-card img { width: 100%; height: 140px; object-fit: cover; }
+
+.chart-wrap {
+  background: #fff; border-radius: 12px;
+  padding: 1.5rem; border: 1px solid #eee;
+}
+
+@media (max-width: 991px) {
+  #admin-sidebar { transform: translateX(-100%); }
+  .admin-main { margin-left: 0; }
+}

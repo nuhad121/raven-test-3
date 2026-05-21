@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>/*RAVEN_GH_PAGES*/(function(){var h=location.hostname;if(!h.endsWith('github.io'))return;var p=location.pathname.split('/').filter(Boolean);if(!p.length)return;var r=p[0];if(r.indexOf('.')!==-1)return;if(h.split('.')[0].toLowerCase()===r.toLowerCase())return;var b=location.pathname.indexOf('/admin/')!==-1?'/'+r+'/admin/':'/'+r+'/';document.write('<base href="'+b+'">');})();</script>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Register | RAVEN</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet"/>
+<link href="css/main.css" rel="stylesheet"/>
+</head>
+<body data-page="register">
+<div id="page-loader"><div class="loader-logo">RAVEN</div></div>
+<div id="site-header"></div>
+<main class="container"><div class="auth-card"><h2 class="text-center">Create Account</h2>
+<form id="register-form"><input name="name" class="form-control mb-2" required placeholder="Name"/>
+<input name="email" type="email" class="form-control mb-2" required placeholder="Email"/>
+<input name="phone" class="form-control mb-2" required placeholder="01XXXXXXXXX"/>
+<div class="password-field-wrap mb-1">
+<input name="password" id="reg-password" type="password" class="form-control" required placeholder="Password" autocomplete="new-password"/>
+<button type="button" class="password-toggle-btn" data-toggle-password="reg-password" aria-label="Show password"><i class="bi bi-eye"></i></button>
+</motion>
+<div class="progress mb-1" style="height:4px"><div id="password-strength-bar" class="progress-bar"></div></div><small class="text-muted d-block mb-2"></small>
+<div class="password-field-wrap mb-3">
+<input name="confirm" id="reg-confirm" type="password" class="form-control" required placeholder="Confirm password" autocomplete="new-password"/>
+<button type="button" class="password-toggle-btn" data-toggle-password="reg-confirm" aria-label="Show password"><i class="bi bi-eye"></i></button>
+</div>
+<button type="submit" class="btn btn-dark w-100" id="register-submit-btn">Sign Up</button></form></div></main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/email-config.js"></script>
+<script src="js/email-service.js"></script>
+<script src="js/data.js"></script><script src="js/storage.js"></script><script src="js/cloud-config.js"></script><script src="js/cloud-users.js"></script><script src="js/auth.js"></script>
+<script src="js/cart.js"></script><script src="js/ui.js"></script><script src="js/products.js"></script>
+<script src="js/components.js"></script><script src="js/app.js"></script>
+</body>
+</html>
